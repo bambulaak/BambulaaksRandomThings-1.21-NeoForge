@@ -1,5 +1,6 @@
 package net.bambulaak.bambulaaksrandomthings;
 
+import net.bambulaak.bambulaaksrandomthings.block.ModBlocks;
 import net.bambulaak.bambulaaksrandomthings.item.ModItems;
 import org.slf4j.Logger;
 
@@ -47,7 +48,7 @@ public class BambulaaksRT {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
-    // Creates a creative tab for the items, that is placed after the combat tab
+    // My tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
             .withTabsBefore(CreativeModeTabs.COMBAT)
@@ -77,6 +78,7 @@ public class BambulaaksRT {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -98,6 +100,7 @@ public class BambulaaksRT {
         Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
+    // Ingredients tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TURQUOISE);
