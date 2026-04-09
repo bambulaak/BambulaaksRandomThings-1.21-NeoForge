@@ -108,16 +108,6 @@ public class BambulaaksRT {
         }
     }
 
-    // My tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.examplemod")) //The language key for the title of your CreativeModeTab
-            .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> TURQUOISE.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                output.accept(TURQUOISE.get());
-                output.accept(RAW_TURQUOISE.get());
-                output.accept(CHITIN.get());
-            }).build());
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
