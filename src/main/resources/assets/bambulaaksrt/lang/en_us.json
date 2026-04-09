@@ -1,6 +1,11 @@
 {
   "itemGroup.examplemod": "Bambulaak's Random Things",
+
   "block.bambulaaksrt.turquoise_block": "Turquoise Block",
+  "block.bambulaaksrt.raw_turquoise_block": "Raw Turquoise Block",
+  "block.bambulaaksrt.turquoise_ore": "Turquoise Ore",
+  "block.bambulaaksrt.chitin_block": "Chitin Block",
+
   "item.bambulaaksrt.turquoise": "Turquoise",
   "item.bambulaaksrt.raw_turquoise": "Raw Turquoise",
   "item.bambulaaksrt.chitin": "Chitin"
